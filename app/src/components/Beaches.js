@@ -1,13 +1,23 @@
 import React from 'react';
-import Beach from './Alerts';
+import { connect } from 'react-redux';
 
-const Beaches = () => {
+import SearchForm from './SearchForm';
+import Beach from './Beach';
+
+const Beaches = props => {
+    console.log("Beaches props:", props)
+
     return (
         <div>
+            <SearchForm />
             <h3>These are beaches: </h3>
             <Beach />
         </div>
     )
 }
 
-export default Beaches;
+const mapStateToProps = state => {
+    return { beaches: state.beaches };
+}
+
+export default connect(mapStateToProps, {})(Beaches);
