@@ -1,19 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-
 import { getData } from '../actions/actions';
-
-import SearchForm from './SearchForm';
+// import SearchForm from './SearchForm';
 import Beach from './Beach';
 
 const Beaches = props => {
     console.log("Beaches props:", props.beaches.data)
 
-    const handleGetData = e => {
-        e.preventDefault();
-        props.getData();
-    };
-
+    useEffect(() => {props.getData()}, []);
 
     return (
         <div>
@@ -21,9 +15,27 @@ const Beaches = props => {
                 <p>Loading...</p>
             ) : (
                 <div>
-                    <button onClick={handleGetData}>Get Beach Conditions</button>
-                    <h3>Beaches:</h3>
-                    <Beach />
+                    <h3>These are beaches:</h3>
+                    {(!props.beaches.data) ? <p>Loading...</p> : 
+                        props.beaches.data.map(beach => {
+                            return (
+                                <Beach 
+                                    key={beach.beach_id}
+                                    name={beach.beach}
+                                    island={beach.island}
+                                    shore={beach.shore}
+                                    weather={beach.weather}
+                                    temp={beach.temp}
+                                    wind={beach.wind}
+                                    surf={beach.surf}
+                                    nearshore={beach.nearshore}
+                                    offshore={beach.offshore}
+                                    urlSrc={beach.link}
+                                />
+                            )
+                        })
+                    }
+                    
                 </div>
             )}
             

@@ -8,7 +8,7 @@ import {
 // export initial state
 export const initialState = {
     beaches: [],
-    isFetchingData: false,
+    isFetchingData: true,
     error: ''
 }
 
