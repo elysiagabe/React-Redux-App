@@ -1,26 +1,29 @@
 import React from 'react';
+// Components
+import Weather from './BeachComponents/Weather';
 
-const Beach = props => {
-    console.log('Beach props:', props)
+const Beach = ({beach}) => {
+    //console.log('Beach props:', props)
     return (
         <div>
             <div>
-                <h2>{props.name}</h2>
-                <p>{props.island}</p>
+                <h2>{beach.name}</h2>
+                <p>{beach.island}</p>
             </div>
-            <p>{props.shore}</p>
+            <p>{beach.shore}</p>
+            <Weather 
+                weather={beach.weather}
+                temp={beach.temp}
+            />
             <div>
-                Current Weather: {props.weather} and {props.temp}
+                <p>Wind: {beach.wind}</p>
+                <p>Surf: {beach.surf}</p>
             </div>
             <div>
-                <p>Wind: {props.wind}</p>
-                <p>Surf: {props.surf}</p>
+                <p>{beach.nearshore}</p>
+                <p>{beach.offshore}</p>
             </div>
-            <div>
-                <p>{props.nearshore}</p>
-                <p>{props.offshore}</p>
-            </div>
-            <a href={props.urlSrc} target="_blank">See More</a>
+            <a href={beach.link} target="_blank" rel="noopener noreferrer" >See More</a>
         </div>
     )
 }

@@ -5,7 +5,7 @@ import { getData } from '../actions/actions';
 import Beach from './Beach';
 
 const Beaches = props => {
-    console.log("Beaches props:", props.beaches.data)
+    //console.log("Beaches props:", props.beaches.data)
 
     useEffect(() => {props.getData()}, []);
 
@@ -21,16 +21,7 @@ const Beaches = props => {
                             return (
                                 <Beach 
                                     key={beach.beach_id}
-                                    name={beach.beach}
-                                    island={beach.island}
-                                    shore={beach.shore}
-                                    weather={beach.weather}
-                                    temp={beach.temp}
-                                    wind={beach.wind}
-                                    surf={beach.surf}
-                                    nearshore={beach.nearshore}
-                                    offshore={beach.offshore}
-                                    urlSrc={beach.link}
+                                    beach={beach} 
                                 />
                             )
                         })
