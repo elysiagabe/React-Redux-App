@@ -8,7 +8,6 @@ import './App.css';
 // Components
 import Beaches from './components/Beaches';
 import Alerts from './components/Alerts';
-import SearchForm from './components/SearchForm';
 
 const store = createStore(reducer,applyMiddleware(thunk)); 
 
