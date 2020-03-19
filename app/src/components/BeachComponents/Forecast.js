@@ -4,7 +4,7 @@ import Wind from '../../assets/wind.svg';
 import Surf from '../../assets/surf.svg';
 
 // Condition Messages
-const lowHazard = "Approach the ocean with caution. Be vigilant of changing conditions, espeically at beachs known for strong shore breaks. Weak swimmers should not venture offshore.";
+const lowHazard = "Approach the ocean with caution. Be vigilant of changing conditions, espeically at beaches known for strong shore breaks. Weak swimmers should not venture offshore.";
 const highHazard = "Swimmers are advised to stay out of the ocean. Currents and surge on the beach are quite strong and shore break can cause injury."
 const notAvailable = "Conditions do not apply to this location."
 
@@ -32,18 +32,18 @@ const Forecast = props => {
             <div>
                 <h3>Nearshore Conditions</h3>
                 <p>
-                {props.nearshore === 'low' ? `${lowHazard}` : null}
-                {props.nearshore === 'high' ? `${highHazard}` : null}
-                {props.nearshore === 'na' ? `${notAvailable}` : null}
+                {props.nearshore === 'low' && `Caution: ${lowHazard}`}
+                {props.nearshore === 'high' && `High Hazard: ${highHazard}`}
+                {props.nearshore === 'na' && `${notAvailable}`}
                 </p>
             </div>
             {/* OFFSHORE */}
             <div>
                 <h3>Offshore Conditions</h3>
                 <p>
-                {props.offshore === 'low' ? `${lowHazard}` : null}
-                {props.offshore === 'high' ? `${highHazard}` : null}
-                {props.offshore === 'na' ? `${notAvailable}` : null}
+                {props.offshore === 'low' && `Caution: ${lowHazard}`}
+                {props.offshore === 'high' && `High Hazard: ${highHazard}`}
+                {props.offshore === 'na' && `${notAvailable}`}
                 </p>
             </div>
 
