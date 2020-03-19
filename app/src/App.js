@@ -8,6 +8,7 @@ import './App.css';
 // Components
 import Beaches from './components/Beaches';
 import Alerts from './components/Alerts';
+import Footer from './components/Footer';
 
 const store = createStore(reducer,applyMiddleware(thunk)); 
 
@@ -18,6 +19,7 @@ function App() {
         <h1>Hawaii Ocean Safety</h1>
         <Alerts />
         <Beaches />
+        <Footer />
       </div>
     </Provider>
   );

@@ -1,38 +1,131 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,400,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 4.4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 200;
+}
+
+h3, h4 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+p, a {
+  font-size: 1.6rem;
+}
+
+/* BEACH CARD STYLES */
+.beach-card {
+  width: 65%;
+  margin: 32px auto;
+  border: 1px solid #5AAD8B;
+  border-radius: 4px;
+}
+
+.beach-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5AAD8B;
+  color: white;
+  padding: 12px 32px;
+}
+
+.island-label {
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.beach-info {
+  padding: 12px 32px;
+}
+
+.beach-link {
+  display: block;
+  margin: 20px auto 12px;
+  width: 150px;
+  font-size: 2rem;
+  color: #5AAD8B;
   text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* WEATHER STYLES */
+.beach-weather {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  padding-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.beach-weather p {
+  font-size: 3.2rem;
+  font-weight: 200;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.weather-icon {
+  width: 60px;
+  margin-right: 20px;
+}
+
+/* FORECAST STYLES */
+.forecast {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.forecast div {
+  width: 48%;
+}
+
+.forecast img {
+  width: 40px;
+  margin-right: 12px;
+}
+
+.forecast h3 {
+  padding-bottom: 8px;
+}
+
+.forecast p {
+  text-transform: uppercase;
+  font-weight: 200;
+  padding-bottom: 16px;
+}
+
+.forecast-title {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* FOOTER STYLES */
+footer {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 48px 0 60px;
 }
