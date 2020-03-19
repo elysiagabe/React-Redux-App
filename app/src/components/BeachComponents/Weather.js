@@ -20,10 +20,10 @@ const Weather = props => {
             return OverCast
         } else if (props.weather === 'Partly Cloudy') {
             return PartlyCloudy
-        } else if (props.weather === 'Light Rain and Breezy' || props.weather === 'Light Rain' || props.weather === 'Rain Fog/Mist') {
-            return LightRain
-        } else if (props.weather === 'Thunderstorm Heavy Rain' || props.weather === 'Thunderstorm Rain') {
+        } else if (/thunderstorm/i.test(props.weather)) {
             return Thunderstorm
+        } else if (/rain/i.test(props.weather)) {
+            return LightRain
         } else {
             return Sunny;
         }
