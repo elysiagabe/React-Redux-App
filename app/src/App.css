@@ -11,10 +11,14 @@
 body {
   font-family: 'Nunito', sans-serif;
   line-height: 1.4;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1506&q=80');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
   font-size: 4.4rem;
+  font-weight: 200;
 }
 
 h2 {
@@ -31,12 +35,46 @@ p, a {
   font-size: 1.6rem;
 }
 
+/* FORM STYLES */
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text] {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8rem;
+  border: 1px solid #5AAD8B;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 400px;
+  padding: 4px 12px;
+} 
+
+button[type=submit] {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8rem;
+  background-color: #5AAD8B;
+  color: white;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: none;
+  padding: 4px 12px;
+}
+
+/* HEADER STYLES */
+header {
+  width: 65%;
+  margin: 32px auto;
+}
+
 /* BEACH CARD STYLES */
 .beach-card {
   width: 65%;
   margin: 32px auto;
   border: 1px solid #5AAD8B;
   border-radius: 4px;
+  background-color: 	rgb(255,255,255, .7)
 }
 
 .beach-header {

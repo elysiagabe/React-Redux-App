@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getData } from '../actions/actions';
 // Components
-// import SearchForm from './SearchForm';
 import Beach from './Beach';
 
 const Beaches = props => {
@@ -24,7 +23,7 @@ const Beaches = props => {
 
     const handleSearch = e => {
         e.preventDefault();
-        const searchResults = props.beaches.data.filter(beach => beach.beach.toLowerCase().includes(searchTerm.toLowerCase()))
+        const searchResults = props.beaches.data.filter(beach => beach.beach.toLowerCase().includes(searchTerm.toLowerCase()) || beach.island.toLowerCase().includes(searchTerm.toLowerCase()))
         setBeaches(searchResults);
         setSearchTerm('');
     }
@@ -38,7 +37,7 @@ const Beaches = props => {
                 <input 
                     type="text"
                     name="searchTerm"
-                    placeholder="Find your favorite beach..."
+                    placeholder="Find your beach..."
                     value={searchTerm}
                     onChange={handleChanges}
                 />
