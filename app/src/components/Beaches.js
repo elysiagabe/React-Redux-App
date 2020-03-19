@@ -4,6 +4,13 @@ import { getData } from '../actions/actions';
 // Components
 import Beach from './Beach';
 
+const islands = [
+    {name: 'Oahu'},
+    {name: 'Maui'},
+    {name: 'Kauai'},
+    {name: 'Big Island'}
+]
+
 const Beaches = props => {
     //console.log("Beaches props:", props.beaches.data)
     const [beaches, setBeaches] = useState(props.beaches.data)
@@ -28,6 +35,11 @@ const Beaches = props => {
         setSearchTerm('');
     }
 
+    const filterByIsland = islandName => {
+        const filteredResults = props.beaches.data.filter(beach => beach.island.toLowerCase().includes(islandName.toLowerCase()));
+        setBeaches(filteredResults);
+    }
+
     //console.log({searchTerm});
     //console.log({beaches});
 
@@ -43,6 +55,16 @@ const Beaches = props => {
                 />
                 <button type="submit">Search</button>
             </form>
+            <div className="filter">
+                <p>Or filter by island:</p>
+                <div className="islands">
+                    {islands.map(island => {
+                        return (
+                            <div className="island-filter" onClick={() => filterByIsland(island.name)}>{island.name}</div>
+                        )
+                    })}
+                </div>
+            </div>
             {props.isFetchingData ? (
                 <p>Loading...</p>
             ) : (

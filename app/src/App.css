@@ -35,7 +35,7 @@ p, a {
   font-size: 1.6rem;
 }
 
-/* FORM STYLES */
+/* SEARCH STYLES */
 form {
   display: flex;
   justify-content: center;
@@ -62,6 +62,32 @@ button[type=submit] {
   padding: 4px 12px;
 }
 
+.filter {
+  text-align: center;
+  width: 65%;
+  margin: 12px auto 20px;
+}
+
+.islands {
+  display: flex;
+  justify-content: center;
+  margin: 8px;
+}
+
+.island-filter {
+  font-size: 1.6rem;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  background-color: #5AAD8B;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+
+
 /* HEADER STYLES */
 header {
   width: 65%;
@@ -72,9 +98,8 @@ header {
 .beach-card {
   width: 65%;
   margin: 32px auto;
-  border: 1px solid #5AAD8B;
   border-radius: 4px;
-  background-color: 	rgb(255,255,255, .7)
+  background-color: 	rgb(255,255,255, .9)
 }
 
 .beach-header {
