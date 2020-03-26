@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,400,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.4;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1506&q=80');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 4.4rem;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 200;
+}
+
+h3, h4 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+p, a {
+  font-size: 1.6rem;
+}
+
+/* SEARCH STYLES */
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input[type=text] {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8rem;
+  border: 1px solid #5AAD8B;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  width: 400px;
+  padding: 4px 12px;
+} 
+
+button[type=submit] {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8rem;
+  background-color: #5AAD8B;
+  color: white;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border: none;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.filter {
+  text-align: center;
+  width: 65%;
+  margin: 12px auto 20px;
+}
+
+.islands {
+  display: flex;
+  justify-content: center;
+  margin: 8px;
+}
+
+.island-filter {
+  font-size: 1.6rem;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  background-color: #5AAD8B;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+/* HEADER STYLES */
+header {
+  width: 65%;
+  margin: 32px auto;
+}
+
+/* BEACH CARD STYLES */
+.show-more {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8rem;
+  background-color: #5AAD8B;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 4px 12px;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.show-more:hover{
+  background-color: #519B7D;
+}
+
+.beach-card {
+  width: 65%;
+  margin: 32px auto;
+  border-radius: 4px;
+  background-color: 	rgb(255,255,255, .9)
+}
+
+.beach-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5AAD8B;
+  color: white;
+  padding: 12px 32px;
+}
+
+.island-label {
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.beach-info {
+  padding: 12px 32px;
+}
+
+.beach-link {
+  display: block;
+  margin: 20px auto 12px;
+  width: 150px;
+  font-size: 2rem;
+  color: #5AAD8B;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* WEATHER STYLES */
+.beach-weather {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  padding-bottom: 20px;
+}
+
+.beach-weather p {
+  font-size: 3.2rem;
+  font-weight: 200;
+}
+
+.weather-icon {
+  width: 60px;
+  margin-right: 20px;
+}
+
+/* FORECAST STYLES */
+.forecast {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.forecast div {
+  width: 48%;
+}
+
+.forecast img {
+  width: 40px;
+  margin-right: 12px;
+}
+
+.forecast h3 {
+  padding-bottom: 8px;
+}
+
+.forecast p {
+  text-transform: uppercase;
+  font-weight: 200;
+  padding-bottom: 16px;
+}
+
+.forecast-title {
+  display: flex;
+  flex-direction: column;
+}
+
+/* FOOTER STYLES */
+footer {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 48px 0 60px;
+}
