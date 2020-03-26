@@ -15,6 +15,7 @@ const Beaches = props => {
     //console.log("Beaches props:", props.beaches.data)
     const [beaches, setBeaches] = useState(props.beaches.data)
     const [searchTerm, setSearchTerm] = useState('');
+    const [endIndex, setEndIndex] = useState(4);
 
     useEffect(() => {
         props.getData()
@@ -68,9 +69,10 @@ const Beaches = props => {
             {props.isFetchingData ? (
                 <p>Loading...</p>
             ) : (
+                <>
                 <div>
                     {(!beaches) ? <p>Loading...</p> : 
-                        beaches.map(beach => {
+                        beaches.slice(0,endIndex).map(beach => {
                             return (
                                 <Beach 
                                     key={beach.beach_id}
@@ -80,6 +82,9 @@ const Beaches = props => {
                         })
                     }
                 </div>
+                {beaches && endIndex < beaches.length ? <button onClick={() => setEndIndex(endIndex + 5)} className=
+                'show-more'>Show More</button> : null}
+                </>
             )}
         </div>
     )

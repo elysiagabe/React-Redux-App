@@ -6,6 +6,7 @@ import Surf from '../../assets/surf.svg';
 // Condition Messages
 const lowHazard = "Approach the ocean with caution. Be vigilant of changing conditions, espeically at beaches known for strong shore breaks. Weak swimmers should not venture offshore.";
 const highHazard = "Swimmers are advised to stay out of the ocean. Currents and surge on the beach are quite strong and shore break can cause injury."
+const extremeHazard = "Conditions are extremely dangerous and may lead to injury. Swimmers, kayakers and users of other unpowered craft are advised to stay out of the ocean."
 const notAvailable = "Conditions do not apply to this location."
 
 const Forecast = props => {
@@ -35,6 +36,7 @@ const Forecast = props => {
                 {props.nearshore === 'low' && `Caution: ${lowHazard}`}
                 {props.nearshore === 'high' && `High Hazard: ${highHazard}`}
                 {props.nearshore === 'na' && `${notAvailable}`}
+                {props.nearshore === 'extreme' && `Extreme Hazard: ${extremeHazard}`}
                 </p>
             </div>
             {/* OFFSHORE */}
@@ -43,6 +45,7 @@ const Forecast = props => {
                 <p>
                 {props.offshore === 'low' && `Caution: ${lowHazard}`}
                 {props.offshore === 'high' && `High Hazard: ${highHazard}`}
+                {props.offshore === 'extreme' && `Extreme Hazard: ${extremeHazard}`}
                 {props.offshore === 'na' && `${notAvailable}`}
                 </p>
             </div>

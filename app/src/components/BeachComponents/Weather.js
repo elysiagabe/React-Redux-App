@@ -16,7 +16,7 @@ const Weather = props => {
             return FewClouds
         } else if (props.weather === 'Mostly Cloudy') {
             return MostlyCloudy
-        } else if (props.weather === 'Overcast') {
+        } else if (/overcast/i.test(props.weather)) {
             return OverCast
         } else if (props.weather === 'Partly Cloudy') {
             return PartlyCloudy
